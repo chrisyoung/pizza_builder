@@ -1,0 +1,21 @@
+#!/bin/bash
+
+# 1. Build gems and add them to the vendor directory
+# 2. Build the docker container
+
+# Build Hecks
+cd ../hecks gem build ../hecks/hecks
+cp hecks-0.0.0.gem ../pizza_server/vendor
+
+# Build Pizza Builder
+cd ../pizza_builder gem build pizza_builder
+cp pizza_builder-0.0.0.gem ../pizza_server/vendor
+
+# Build Pizza Builder Adapters
+cd ../pizza_builder_adapters gem build pizza_builder_adapters
+cp pizza_builder_adapters-0.0.0.gem ../pizza_server/vendor
+
+cd ../pizza_server
+
+# Build Container
+docker build .
