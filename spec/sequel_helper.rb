@@ -1,6 +1,6 @@
 require 'sequel'
 
-DB = Sequel.connect(
+Sequel.connect(
   adapter:  'mysql2',
   user:     'root',
   host:     'localhost',

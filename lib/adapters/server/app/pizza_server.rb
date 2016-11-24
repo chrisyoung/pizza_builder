@@ -1,7 +1,6 @@
 require 'hecks'
-require 'pizza_builder'
-
 require_relative '../db/config'
+require 'pizza_builder'
 
 class PizzaServer
   def app
