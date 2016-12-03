@@ -1,6 +1,3 @@
-require_relative 'topping'
-require_relative 'pizza'
-
 module PizzaBuilder
   module Domain
     module Pizzas
